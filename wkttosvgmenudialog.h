@@ -21,12 +21,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 #ifndef RIBI_WKTTOSVGMENUDIALOG_H
 #define RIBI_WKTTOSVGMENUDIALOG_H
 
-#include <string>
-#include <vector>
-
 #include "menudialog.h"
-
-struct QRegExp;
 
 namespace ribi {
 
@@ -36,7 +31,6 @@ struct WktToSvgMenuDialog final : public MenuDialog
   WktToSvgMenuDialog();
   About GetAbout() const noexcept override;
   Help GetHelp() const noexcept override;
-  boost::shared_ptr<const Program> GetProgram() const noexcept override;
   std::string GetVersion() const noexcept override;
   std::vector<std::string> GetVersionHistory() const noexcept override;
 

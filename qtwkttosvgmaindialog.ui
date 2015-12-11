@@ -23,8 +23,8 @@
    <string>WktToSvg</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="ToolWktToSvg.qrc">
-    <normaloff>:/ToolWktToSvg/ToolWktToSvgIcon.png</normaloff>:/ToolWktToSvg/ToolWktToSvgIcon.png</iconset>
+   <iconset resource="WktToSvg.qrc">
+    <normaloff>:/ToolWktToSvg/WktToSvgIcon.png</normaloff>:/ToolWktToSvg/WktToSvgIcon.png</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true">QDialog { 
@@ -132,7 +132,7 @@ QPlainTextEdit { font: 10px }
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="ToolWktToSvg.qrc"/>
+  <include location="WktToSvg.qrc"/>
  </resources>
  <connections/>
 </ui>

@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>171</width>
+    <width>176</width>
     <height>323</height>
    </rect>
   </property>
@@ -19,8 +19,8 @@
    <string>WktToSvg</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="ToolWktToSvg.qrc">
-    <normaloff>:/ToolWktToSvg/ToolWktToSvgIcon.png</normaloff>:/ToolWktToSvg/ToolWktToSvgIcon.png</iconset>
+   <iconset resource="WktToSvg.qrc">
+    <normaloff>:/ToolWktToSvg/WktToSvgIcon.png</normaloff>:/ToolWktToSvg/WktToSvgIcon.png</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true">QDialog { 
@@ -67,7 +67,7 @@ QPushButton { font: 48px &quot;Courier New&quot;, courier, monospace }</string>
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap resource="ToolWktToSvg.qrc">:/ToolWktToSvg/ToolWktToSvgWelcome.png</pixmap>
+      <pixmap resource="WktToSvg.qrc">:/ToolWktToSvg/WktToSvgWelcome.png</pixmap>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -82,7 +82,7 @@ QPushButton { font: 48px &quot;Courier New&quot;, courier, monospace }</string>
   <tabstop>button_quit</tabstop>
  </tabstops>
  <resources>
-  <include location="ToolWktToSvg.qrc"/>
+  <include location="WktToSvg.qrc"/>
  </resources>
  <connections/>
 </ui>

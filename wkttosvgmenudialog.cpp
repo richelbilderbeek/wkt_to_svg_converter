@@ -33,7 +33,6 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 #include <QRegExp>
 
 #include "fileio.h"
-#include "richelbilderbeekprogram.h"
 #include "testtimer.h"
 #include "trace.h"
 #include "wkttosvgmaindialog.h"
@@ -148,7 +147,7 @@ ribi::About ribi::WktToSvgMenuDialog::GetAbout() const noexcept
     "Richel Bilderbeek",
     "WktToSvg",
     "tool to convert WKT to SVG",
-    "the 12th of June 2014",
+    "December 11th of 2015",
     "2014-2015",
     "http://www.richelbilderbeek.nl/ToolWktToSvg.htm",
     GetVersion(),
@@ -177,18 +176,9 @@ ribi::Help ribi::WktToSvgMenuDialog::GetHelp() const noexcept
   );
 }
 
-boost::shared_ptr<const ribi::Program> ribi::WktToSvgMenuDialog::GetProgram() const noexcept
-{
-  boost::shared_ptr<const ribi::Program> p {
-    new ribi::ProgramWktToSvg
-  };
-  assert(p);
-  return p;
-}
-
 std::string ribi::WktToSvgMenuDialog::GetVersion() const noexcept
 {
-  return "1.3";
+  return "2.0";
 }
 
 std::vector<std::string> ribi::WktToSvgMenuDialog::GetVersionHistory() const noexcept
@@ -197,7 +187,8 @@ std::vector<std::string> ribi::WktToSvgMenuDialog::GetVersionHistory() const noe
     "2014-06-10: version 1.0: initial version, supports polygon only",
     "2014-06-10: version 1.1: added support for linestring",
     "2014-06-12: version 1.2: added stroke_width parameter",
-    "2014-06-12: version 1.3: removed verbose option in desktop version"
+    "2014-06-12: version 1.3: removed verbose option in desktop version",
+    "2015-12-11: version 2.0: moved to own GitHub",
   };
 }
 
