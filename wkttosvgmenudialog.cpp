@@ -65,7 +65,7 @@ int ribi::WktToSvgMenuDialog::Execute(const std::vector<std::string>& args) noex
   }
   if (wkt.empty())
   {
-    std::cerr << "Please supply a WKT, e.g. 'POLYGON((1 1,1 -1,1 -1))" << std::endl;
+    std::cerr << "Please supply a WKT, e.g. '--wkt \"POLYGON((1 1,1 -1,1 -1))\"'\n";
     return 1;
 
   }
