@@ -21,21 +21,25 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 #ifndef RIBI_WKTTOSVGMENUDIALOG_H
 #define RIBI_WKTTOSVGMENUDIALOG_H
 
-#include "menudialog.h"
+#include <string>
+#include <vector>
+
+#include "about.h"
+#include "help.h"
 
 namespace ribi {
 
 ///GUI independent WktToSvg menu dialog
-struct WktToSvgMenuDialog final : public MenuDialog
+struct WktToSvgMenuDialog
 {
   WktToSvgMenuDialog();
-  About GetAbout() const noexcept override;
-  Help GetHelp() const noexcept override;
-  std::string GetVersion() const noexcept override;
-  std::vector<std::string> GetVersionHistory() const noexcept override;
+  About GetAbout() const noexcept;
+  Help GetHelp() const noexcept;
+  std::string GetVersion() const noexcept;
+  std::vector<std::string> GetVersionHistory() const noexcept;
 
   private:
-  int ExecuteSpecific(const std::vector<std::string>& argv) noexcept override;
+  int Execute(const std::vector<std::string>& argv) noexcept;
 
   #ifndef NDEBUG
   static void Test() noexcept;

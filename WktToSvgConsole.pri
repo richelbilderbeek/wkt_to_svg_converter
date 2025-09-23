@@ -1,14 +1,14 @@
-INCLUDEPATH += ../WktToSvg
+INCLUDEPATH += ../wkt_to_svg_converter
 
 HEADERS += \
-    ../WktToSvg/wkttosvgmaindialog.h \
-    ../WktToSvg/wkttosvgmenudialog.h
+    ../wkt_to_svg_converter/wkttosvgmaindialog.h \
+    ../wkt_to_svg_converter/wkttosvgmenudialog.h
 
 SOURCES += \
-    ../WktToSvg/wkttosvgmaindialog.cpp \
-    ../WktToSvg/wkttosvgmenudialog.cpp
+    ../wkt_to_svg_converter/wkttosvgmaindialog.cpp \
+    ../wkt_to_svg_converter/wkttosvgmenudialog.cpp
 
 RESOURCES += \
-    ../WktToSvg/WktToSvg.qrc
+    ../wkt_to_svg_converter/WktToSvg.qrc
 
 

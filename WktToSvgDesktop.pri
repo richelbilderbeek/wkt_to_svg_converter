@@ -1,13 +1,13 @@
-include(../WktToSvg/WktToSvgConsole.pri)
+include(../wkt_to_svg_converter/WktToSvgConsole.pri)
 
 SOURCES += \
-    ../WktToSvg/qtwkttosvgmenudialog.cpp \
-    ../WktToSvg/qtwkttosvgmaindialog.cpp
+    ../wkt_to_svg_converter/qtwkttosvgmenudialog.cpp \
+    ../wkt_to_svg_converter/qtwkttosvgmaindialog.cpp
 
 FORMS += \
-    ../WktToSvg/qtwkttosvgmenudialog.ui \
-    ../WktToSvg/qtwkttosvgmaindialog.ui
+    ../wkt_to_svg_converter/qtwkttosvgmenudialog.ui \
+    ../wkt_to_svg_converter/qtwkttosvgmaindialog.ui
 
 HEADERS += \
-    ../WktToSvg/qtwkttosvgmenudialog.h \
-    ../WktToSvg/qtwkttosvgmaindialog.h
+    ../wkt_to_svg_converter/qtwkttosvgmenudialog.h \
+    ../wkt_to_svg_converter/qtwkttosvgmaindialog.h

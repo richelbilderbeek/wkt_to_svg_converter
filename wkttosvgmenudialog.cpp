@@ -30,11 +30,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 #pragma GCC diagnostic ignored "-Wunused-but-set-parameter"
 #include <boost/lexical_cast.hpp>
 
-#include <QRegExp>
-
 #include "fileio.h"
-#include "testtimer.h"
-#include "trace.h"
 #include "wkttosvgmaindialog.h"
 #pragma GCC diagnostic pop
 
@@ -45,7 +41,7 @@ ribi::WktToSvgMenuDialog::WktToSvgMenuDialog()
   #endif
 }
 
-int ribi::WktToSvgMenuDialog::ExecuteSpecific(const std::vector<std::string>& args) noexcept
+int ribi::WktToSvgMenuDialog::Execute(const std::vector<std::string>& args) noexcept
 {
   const int argc = static_cast<int>(args.size());
 
@@ -140,9 +136,10 @@ int ribi::WktToSvgMenuDialog::ExecuteSpecific(const std::vector<std::string>& ar
   }
 }
 
+
 ribi::About ribi::WktToSvgMenuDialog::GetAbout() const noexcept
 {
-  
+
   About a(
     "Richel Bilderbeek",
     "WktToSvg",
@@ -203,13 +200,11 @@ void ribi::WktToSvgMenuDialog::Test() noexcept
   WktToSvgMenuDialog().GetAbout();
   WktToSvgMenuDialog().GetHelp();
   WktToSvgMainDialog("",1.0);
-  const TestTimer test_timer(__func__,__FILE__,1.0);
-  const bool verbose{false};
-  if (verbose) { TRACE("Construction"); }
+  //Construction"); }
   {
     WktToSvgMenuDialog d;
   }
-  if (verbose) { TRACE("Run with simple polygon"); }
+  //Run with simple polygon"); }
   {
     WktToSvgMenuDialog().Execute(
       {
@@ -220,7 +215,7 @@ void ribi::WktToSvgMenuDialog::Test() noexcept
       }
     );
   }
-  if (verbose) { TRACE("Run with simple linestring"); }
+  //Run with simple linestring"); }
   {
     WktToSvgMenuDialog().Execute(
       {
@@ -231,7 +226,7 @@ void ribi::WktToSvgMenuDialog::Test() noexcept
       }
     );
   }
-  if (verbose) { TRACE("Run with simple polygons"); }
+  //Run with simple polygons"); }
   {
     WktToSvgMenuDialog().Execute(
       {
@@ -242,7 +237,7 @@ void ribi::WktToSvgMenuDialog::Test() noexcept
       }
     );
   }
-  if (verbose) { TRACE("Run with simple polygon and linestring"); }
+  //Run with simple polygon and linestring"); }
   {
     WktToSvgMenuDialog().Execute(
       {

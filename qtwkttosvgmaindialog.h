@@ -21,6 +21,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 #ifndef QTWKTTOSVGMAINDIALOG_H
 #define QTWKTTOSVGMAINDIALOG_H
 
+#include <QDialog>
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Weffc++"
 #pragma GCC diagnostic ignored "-Wunused-local-typedefs"
@@ -31,8 +32,6 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 #include <boost/units/systems/si/area.hpp>
 #include <boost/units/systems/si/length.hpp>
 #include <boost/units/systems/si/plane_angle.hpp>
-#include "qthideandshowdialog.h"
-//#include "trianglemeshcreateverticalfacesstrategy.h"
 #pragma GCC diagnostic pop
 
 struct QPlainTextEdit;
@@ -43,7 +42,7 @@ namespace Ui {
 
 namespace ribi {
 
-class QtWktToSvgMainDialog : public QtHideAndShowDialog
+class QtWktToSvgMainDialog : public QDialog
 {
   Q_OBJECT
 

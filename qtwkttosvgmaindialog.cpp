@@ -25,22 +25,20 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 #include "qtwkttosvgmaindialog.h"
 
 #include <fstream>
-#include <stdexcept>
 
 #include <QGraphicsSvgItem>
 #include <QKeyEvent>
 
-#include "fileio.h"
 #include "qtnavigationablegraphicsview.h"
-#include "testtimer.h"
-#include "trace.h"
+#include "fileio.h"
+//#include "testtimer.h"
 #include "wkttosvgmaindialog.h"
 #include "ui_qtwkttosvgmaindialog.h"
 
 #pragma GCC diagnostic pop
 
 ribi::QtWktToSvgMainDialog::QtWktToSvgMainDialog(QWidget *parent) noexcept
-  : QtHideAndShowDialog(parent),
+  : QDialog(parent),
     ui(new Ui::QtWktToSvgMainDialog)
 {
   #ifndef NDEBUG
@@ -82,7 +80,6 @@ void ribi::QtWktToSvgMainDialog::Test() noexcept
     if (is_tested) return;
     is_tested = true;
   }
-  const TestTimer test_timer(__func__,__FILE__,1.0);
   WktToSvgMainDialog("POLYGON((0 0,0 1,1 1))",1.0);
   QtWktToSvgMainDialog();
 }

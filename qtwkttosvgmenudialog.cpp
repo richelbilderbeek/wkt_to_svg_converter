@@ -24,20 +24,16 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 #pragma GCC diagnostic ignored "-Wunused-but-set-parameter"
 #include "qtwkttosvgmenudialog.h"
 
-#include <QDesktopWidget>
 #include <QKeyEvent>
 
 #include "wkttosvgmenudialog.h"
-#include "testtimer.h"
-#include "qtaboutdialog.h"
 #include "qtwkttosvgmaindialog.h"
-#include "qthideandshowdialog.h"
-#include "trace.h"
+#include "qtaboutdialog.h"
 #include "ui_qtwkttosvgmenudialog.h"
 #pragma GCC diagnostic pop
 
 ribi::QtWktToSvgMenuDialog::QtWktToSvgMenuDialog(QWidget *parent) noexcept :
-    QtHideAndShowDialog(parent),
+    QDialog(parent),
     ui(new Ui::QtWktToSvgMenuDialog)
 {
   #ifndef NDEBUG
@@ -59,11 +55,11 @@ void ribi::QtWktToSvgMenuDialog::keyPressEvent(QKeyEvent * event) noexcept
 void ribi::QtWktToSvgMenuDialog::on_button_about_clicked() noexcept
 {
   ribi::About a = WktToSvgMenuDialog().GetAbout();
-  a.AddLibrary("QtHideAndShowDialog version: " + QtHideAndShowDialog::GetVersion());
+  //a.AddLibrary("QtHideAndShowDialog version: " + QtHideAndShowDialog::GetVersion());
   ribi::QtAboutDialog d(a);
   d.setWindowIcon(this->windowIcon());
   d.setStyleSheet(this->styleSheet());
-  this->ShowChild(&d);
+  this->show();
 }
 
 void ribi::QtWktToSvgMenuDialog::on_button_quit_clicked() noexcept
@@ -74,7 +70,8 @@ void ribi::QtWktToSvgMenuDialog::on_button_quit_clicked() noexcept
 void ribi::QtWktToSvgMenuDialog::on_button_start_clicked() noexcept
 {
   QtWktToSvgMainDialog d;
-  ShowChild(&d);
+  this->hide();
+  d.exec();
 }
 
 #ifndef NDEBUG
@@ -87,6 +84,5 @@ void ribi::QtWktToSvgMenuDialog::Test() noexcept
   }
   WktToSvgMenuDialog();
   QtWktToSvgMainDialog();
-  const TestTimer test_timer(__func__,__FILE__,1.0);
 }
 #endif
