@@ -22,12 +22,22 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 #pragma GCC diagnostic ignored "-Weffc++"
 #pragma GCC diagnostic ignored "-Wunused-local-typedefs"
 #pragma GCC diagnostic ignored "-Wunused-but-set-parameter"
+#include "container.h"
+#include "menudialog.h"
 #include "wkttosvgmenudialog.h"
 #pragma GCC diagnostic pop
 
+std::vector<std::string> collect_args(int argc, char **argv)
+{
+  std::vector<std::string> v(argv, argv + argc);
+  return v;
+}
+
+
 int main(int argc, char* argv[])
 {
-  const std::vector<std::string> args { ribi::MenuDialog::ConvertArguments(argc,argv) };
+
+  const std::vector<std::string> args = collect_args(argc, argv);
   ribi::WktToSvgMenuDialog d;
   return d.Execute(args);
 

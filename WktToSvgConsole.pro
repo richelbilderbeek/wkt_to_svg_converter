@@ -7,10 +7,12 @@ include(../RibiLibraries/GeneralConsole.pri)
 include(../RibiClasses/CppContainer/CppContainer.pri)
 include(../RibiClasses/CppFuzzy_equal_to/CppFuzzy_equal_to.pri)
 include(../RibiClasses/CppGeometry/CppGeometry.pri)
-include(../RibiClasses/CppPlane/CppPlane.pri)
+include(../plane/plane.pri)
 include(../RibiClasses/CppRibiRegex/CppRibiRegex.pri)
 
 #Specific
 include(WktToSvgConsole.pri)
+
+QT += core5compat
 
 SOURCES += main.cpp

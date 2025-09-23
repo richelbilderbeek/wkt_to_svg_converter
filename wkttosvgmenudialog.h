@@ -37,9 +37,9 @@ struct WktToSvgMenuDialog
   Help GetHelp() const noexcept;
   std::string GetVersion() const noexcept;
   std::vector<std::string> GetVersionHistory() const noexcept;
+  int Execute(const std::vector<std::string>& argv) noexcept;
 
   private:
-  int Execute(const std::vector<std::string>& argv) noexcept;
 
   #ifndef NDEBUG
   static void Test() noexcept;
